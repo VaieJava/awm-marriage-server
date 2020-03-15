@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: marriage
+  datasource:
+    name: marriage
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: vaielx571859
+      url: jdbc:mysql://127.0.0.1:3306/awm_db?useUnicode=true&characterEncoding=utf8
+#      url: jdbc:mysql://39.107.226.36:3306/awm_db?useUnicode=true&characterEncoding=utf8
+
+#eureka配置
+eureka:
+  instance:
+    ##续约更新时间间隔设置5秒，m默认30s
+    lease-renewal-interval-in-seconds: 5
+    ##续约到期时间10秒，默认是90秒
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://39.107.226.36:8762/eureka/
